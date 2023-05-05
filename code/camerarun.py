@@ -70,7 +70,7 @@ while True:
       else:
         isrecording = True
         current_time = time.strftime("%yy-%MM-%dd-%HH-mm-ss", time.localtime())
-        picam2.start_encoder(encoder, "/home/ceres/Pictures/%current_time.h264")
+        picam2.start_encoder(encoder, "/home/ceres/Pictures/{}.jpg".format(current_time))
         picam2.start()   
         print("Recording starting!", current_time)
         time.sleep(1)
